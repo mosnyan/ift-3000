@@ -15,11 +15,11 @@ let rec ex1 list1 list2 =
 
 let rec addPair list =
   match list with
-  | [] -> 0
-  | e::r -> fst e + snd e + addPair r
+  | [] -> []
+  | e::r -> fst e + snd e :: addPair r
 
 (* Quel est le type de cette fonction ? *)
-(* (int * int) list -> int *)
+(* (int * int) list -> int list *)
 
 (* Étant donnée une liste de paires de chaînes de caractères, écrivez une
    fonction, sans utiliser la fonction map, qui renvoie une nouvelle liste
@@ -28,11 +28,11 @@ let rec addPair list =
 
 let rec joinPair list =
   match list with
-  | [] -> ""
-  | e::r -> fst e ^ snd e ^ joinPair r
+  | [] -> []
+  | e::r -> (fst e ^ snd e) :: joinPair r
 
 (* Quel est le type de cette fonction ? *)
-(* (string * string) list -> string *)
+(* (string * string) list -> string list *)
 
 (* Étant donnée une liste de paires de chaînes de caractères et d’entiers,
    écrivez une fonction, sans utiliser la fonction map, qui renvoie une
