@@ -1,4 +1,4 @@
 (lang dune 3.19)
 (name ex1)
 (sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (ex1.exe)))
+(files (lib (META dune-package opam)) (bin (ex1)))
